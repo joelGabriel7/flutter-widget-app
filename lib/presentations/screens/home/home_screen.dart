@@ -21,9 +21,8 @@ class _HomeView extends StatelessWidget {
     return ListView.builder(
       itemCount: appMenuItems.length,
       itemBuilder: (context, index) {
+        final menuText = appMenuItems[index];
 
-        final menuText = appMenuItems[index]; 
-      
         return _CustomListTIle(menuText: menuText);
       },
     );
@@ -35,24 +34,32 @@ class _CustomListTIle extends StatelessWidget {
     required this.menuText,
   });
 
-
   final MenuItem menuText;
 
   @override
   Widget build(BuildContext context) {
+    final colors = Theme.of(context).colorScheme;
 
-  final colors = Theme.of(context).colorScheme;
-    
-    
     return ListTile(
-      leading: Icon(menuText.icon, color: colors.primary,),
-      trailing: Icon(Icons.arrow_forward_ios_rounded, color: colors.primary,),
+      leading: Icon(
+        menuText.icon,
+        color: colors.primary,
+      ),
+      trailing: Icon(
+        Icons.arrow_forward_ios_rounded,
+        color: colors.primary,
+      ),
       title: Text(menuText.title),
       subtitle: Text(menuText.subTitle),
       onTap: () {
-        // TODO:  navegar a otra pantallas
-      },
+        //  Navigator.of(context).push(
+        //       MaterialPageRoute(
+        //           builder: (context) => const ButtonScreens(),
+        //        ),
+        //   );
 
+        Navigator.pushNamed(context, menuText.link);
+      },
     );
   }
 }
