@@ -4,9 +4,9 @@ const colorList = <Color>[
   
  Colors.red,
  Colors.blue,
+ Color(0x79FFFFFF),
  Colors.pink,
  Colors.purple,
-  Colors.white,
  ];
 
 class AppTheme {
