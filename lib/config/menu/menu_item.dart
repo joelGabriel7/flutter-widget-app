@@ -43,10 +43,16 @@ const appMenuItems = <MenuItem>[
    ),
 
   MenuItem(
-      subTitle: 'Indicadores en Pantalla',
       title: 'Animated Container',
+      subTitle: 'Indicadores en Pantalla',
       link: "/animated",
       icon: Icons.check_box_outlined
+   ),
+  MenuItem(
+      title: 'Ui Controls + Tiles',
+      subTitle: 'Una seria de controles de ui con flutter',
+      link: "/ui-controls",
+      icon: Icons.umbrella_outlined
    ),
 
 
