@@ -17,6 +17,7 @@ class _AnimatedScreenState extends State<AnimatedScreen> {
   Color color = Colors.indigo;
   double borderRadius = 10.0;
 
+  // ignore: non_constant_identifier_names
   void ChangeShape() {
     final random = Random();
     width = random.nextInt(300) + 120;
